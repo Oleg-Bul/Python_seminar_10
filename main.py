@@ -1,2 +1,4 @@
-# Получить информацию о текущих курсах валют при помощи requests и bs4.
-# API для получения курса через requests www.cbr-xml-daily.ru
+import requests
+data = requests.get('https://www.cbr-xml-daily.ru/daily_json.js').json()
+print(data['Valute']['EUR']['Name']), print(data['Valute']['EUR']['Value'])
+print(data['Valute']['USD']['Name']), print(data['Valute']['USD']['Value'])
